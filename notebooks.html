@@ -1,0 +1,4354 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Crowling Data pta.trunojoyo &#8212; Arsy Maulana Ali</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Implementasi Latent Directlet Allocation (LDA)" href="notebooks2.html" />
+    <link rel="prev" title="Selamat Datang" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo2.png" class="logo__image only-light" alt="Arsy Maulana Ali - Home"/>
+    <script>document.write(`<img src="_static/logo2.png" class="logo__image only-dark" alt="Arsy Maulana Ali - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Crowling Data pta.trunojoyo</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="notebooks2.html">Implementasi Latent Directlet Allocation (LDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks3.html">Berita Online Suara.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks4.html">Ekstraksi Kata Kunci Berita Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks5.html"><strong>Perhitungan Manual PageRank</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks6.html"><strong>Project UAS PPW</strong></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/arsymaulanaali/datamining/blob/gh-pages/_sources/notebooks.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/arsymaulanaali/datamining" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/arsymaulanaali/datamining/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/notebooks.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Crowling Data pta.trunojoyo</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Crowling Data pta.trunojoyo</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-text">Normalisasi Text</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="crowling-data-pta-trunojoyo">
+<h1>Crowling Data pta.trunojoyo<a class="headerlink" href="#crowling-data-pta-trunojoyo" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library yang di butuhkan</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ambil data dari url</span>
+<span class="n">fakultas</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">page</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://pta.trunojoyo.ac.id/c_search/byfac/</span><span class="si">{}</span><span class="s1">/</span><span class="si">{}</span><span class="s1">&#39;</span>
+
+<span class="c1"># Membuka file CSV untuk menulis hasil scraping</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;hasil_scraping.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+    <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Judul&#39;</span><span class="p">,</span> <span class="s1">&#39;Penulis&#39;</span><span class="p">,</span> <span class="s1">&#39;Dosen Pembimbing I&#39;</span><span class="p">,</span> <span class="s1">&#39;Dosen Pembimbing II&#39;</span><span class="p">,</span> <span class="s1">&#39;Abstrak&#39;</span><span class="p">]</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
+
+    <span class="c1"># Menulis header ke dalam file CSV</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+
+    <span class="k">while</span> <span class="n">page</span> <span class="o">&lt;=</span> <span class="mi">40</span><span class="p">:</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fakultas</span><span class="p">,</span> <span class="n">page</span><span class="p">)</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;data-id&#39;</span><span class="p">:</span> <span class="s1">&#39;id-1&#39;</span><span class="p">})</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">items</span><span class="p">:</span>
+            <span class="k">break</span>
+
+        <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">&#39;title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Judul&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">title</span>
+            <span class="n">div_elements</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;padding:2px 2px 2px 2px;&#39;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">div</span> <span class="ow">in</span> <span class="n">div_elements</span><span class="p">:</span>
+                <span class="n">span</span> <span class="o">=</span> <span class="n">div</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">span</span><span class="p">:</span>
+                    <span class="n">span_text</span> <span class="o">=</span> <span class="n">span</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+                    <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">span_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+            <span class="c1"># Mengambil link abstrak dari elemen dengan kelas &#39;gray button&#39;</span>
+            <span class="n">abstrak_button</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">&#39;gray button&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">abstrak_button</span><span class="p">:</span>
+                <span class="n">abstrak_link</span> <span class="o">=</span> <span class="n">abstrak_button</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+                <span class="n">abstrak_req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">abstrak_link</span><span class="p">)</span>
+                <span class="n">abstrak_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">abstrak_req</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+                <span class="n">abstrak</span> <span class="o">=</span> <span class="n">abstrak_soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;justify&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">abstrak</span><span class="p">:</span>
+                    <span class="n">abstrak_text</span> <span class="o">=</span> <span class="n">abstrak</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Abstrak&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">abstrak_text</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Abstrak&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Abstrak tidak ditemukan&quot;</span>
+
+            <span class="c1"># Menulis data ke dalam file CSV</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil ditambahkan:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+        <span class="n">page</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scraping selesai&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \r\nTERDISTRIBUSI MENGGUNAKAN ORACLE STUDI KASUS \r\nSIAKAD UNIVERSITAS TRUNOJOYO&#39;, &#39;Penulis&#39;: &#39;A.Ubaidillah S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Budi Setyono M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan S.T&#39;, &#39;Abstrak&#39;: &#39;Sistem  informasi  akademik  (SIAKAD) merupakan  sistem  informasi  yang  berfungsi  menangani pengelolaan  dan  penyajian  data-data  akademik,  yang  oleh pihak  fakultas  SIAKAD  dianggap  sangat  penting  dalam memberikan  pelayanan  mahasiswa  yang  membutuhkan informasi akademik. Di Universitas Trunojoyo telah tersedia SIAKAD,  namun  masih  menggunakan  database  terpusat. Sistem seperti ini memberikan kelebihan yaitu perawatannya mudah  selain  itu  juga  membutuhkan  sedikit  biaya,  namun sistem  tersebut  juga  berpotensi  mengahadapi  kendala-kendala  yaitu  dalam  proses  transaksi  data  karena  padatnya jaringan yang menuju database SIAKAD, kelambatan dalam pemrosesan  respon  query  dikarenakan  data  yang  tersimpan semakin besar dan pemrosesan semakin kompleks, dan  juga memiliki kelemahan dalam hal ketersediaan data. Untuk  itu sistem  seperti  ini  memerlukan  pengembangan  sistem database  yang  lebih  baik  dengan  menggunakan  sistem databases  terdistribusi  pada  masing-masing  fakultas  yang dapat  dijadikan  solusi  bagi  permasalahan  di  atas.  Karena dalam basisdata terdistribusi terdapat keuntungan yang tidak dimiliki oleh basisdata  terpusat yaitu pengawasan distribusi, reability,  availability,  kecepatan  dalam  pemrosesan  query dan otonomi local&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;APLIKASI KONTROL DAN MONITORING JARINGAN KOMPUTER BERBASIS MOBILE&#39;, &#39;Penulis&#39;: &#39;M. Basith Ardianto,&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, MT&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Koko Joni, ST&#39;, &#39;Abstrak&#39;: &#39;Berjalannya koneksi jaringan komputer dengan lancar dan tanpa gangguan merupakan harapan seluruh penggunanya,\r\nterutama pihak yang bertanggung jawab pada bidang itu, yakni administrator jaringan. Namun tidak selamanya koneksi\r\njaringan dapat berjalan dengan lancar tanpa adanya gangguan. Kenyataan di lapangan terutama pada jaringan komputer skala\r\nbesar, berpotensi besar terjadi gangguan atau bahkan kerusakan koneksi jaringan komputer.\r\nHal ini rata - rata disebabkan banyaknya penggunaan serta padatnya traffic data dalam jaringan komputer itu sendiri.\r\nOleh karena itu untuk menjaga bahkan meningkatkan kualitas layanan koneksi jaringan maka diperlukan adanya akses kontrol\r\ndan monitoring pada level administrator jaringan secara real-time berbasis mobile, yang dapat mengatur dan mengetahui\r\ninformasi tentang koneksi jaringan dan dapat diakses setiap saat.\r\nPihak administrator jaringan dituntut untuk terlebih dahulu mengetahui adanya gangguan atau bahkan terputusnya\r\nkoneksi jaringan walaupun administrator tidak berada di tempat kontrol dan monitoring, Dengan adanya sistem kontrol dan\r\nmonitoring berbasis mobile, diharapkan dapat membantu tugas administrator dalam mengontrol dan memantau jaringan serta\r\ndalam mengambil kebijakan atas node â\x80\x93 node yang terkoneksi pada jaringan yakni memanajemen koneksi, port dan bandwidth\r\nsetiap saat dan secara mobile. agar dengan segera dapat melakukan pembenahan ketika terjadi gangguan jaringan sebelum\r\npemakai jaringan (klien) melakukan pengaduan atas adanya gangguan.\r\nKata Kunci : Administrator Jaringan, Koneksi Jaringan, Akses Kontrol dan Monitoring.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\r\nENKRIPSI KODE HTML MENGGUNAKAN\r\nALGORITMA BLOWFISH&#39;, &#39;Penulis&#39;: &#39;Akhmad Suyandi, S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan, ST, MT&#39;, &#39;Abstrak&#39;: &#39;Web server adalah sebuah perangkat lunak server yang berfungsi\r\nmenerima permintaan HTTP atau HTTPS dari web client dan\r\nmengirimkan jawaban dalam bentuk halaman-halaman web yang\r\numumnya berbentuk dokumen HTML. Dokumen HTML yang dikirim\r\nmerupakan dokumen yang dibentuk dari bahasa markup yang plaintext.\r\nArtinya, dokumen berisi kode-kode HTML murni tanpa proses enkripsi.\r\nTujuan dari penelitan ini adalah membuat sebuah aplikasi proxy\r\nserver yang menerima permintaan HTTP dari web client dan\r\nmeneruskannya ke web server. Kemudian aplikasi ini akan menerima\r\nrespon dari server dan melakukan proses enkripsi pada dokumen HTML\r\nterlebih dahulu. Sehingga dokumen HTML yang dikirim kepada web\r\nclient sudah berbentuk dokumen HTML yang terenkripsi. Web client\r\ndisini bisa berupa aplikasi seperti Internet Explorer, Mozilla Firefox,\r\natau Opera. Aplikasi-aplikasi tersebut biasa dikenal dengan sebutan web\r\nbrowser.\r\nKetika web browser menerima dokumen HTML yang terenkripsi\r\ndari aplikasi proxy server, maka JavaScript Engine yang ada di web\r\nbrowser akan melakukan proses dekripsi sekaligus rendering sehingga\r\ndokumen akan ditampilkan sesuai dengan aslinya. Namun apabila kode\r\ndari dokumen HTML tersebut dilihat melalui menu view source yang\r\nada di web browser akan didapatkan dokumen HTML yang tetap\r\nterenkripsi.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALAN MATAKULIAH UNTUK PENGGUNAAN RUANGAN KULIAH BERSAMA DI UNIVERSITAS TRUNOJOYO MADURA MENGGUNAKAN ALGORITMA  \r\nGENETIKA&#39;, &#39;Penulis&#39;: &#39;Heri Supriyanto&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Mulaab, S.Si., M.Kom&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Firli Irhamni, ST., M.Kom&#39;, &#39;Abstrak&#39;: &#39;Penjadwalan  kuliah  di  Perguruan  Tinggi  merupakan  masalah yang  kompleks.  Dalam  permasalahan tersebut  terdapat  beberapa variabel  yang  harus  dipertimbangkan  supaya  mendapatkan  jadwal  yang \r\noptimal. Di dalam penyusunan jadwal kuliah ini terdapat sangat banyak kemungkinan  yang  selayaknya  dicoba  untuk  menemukan  penjadwalan yang  terbaik.  Karena  itu  dibutuhkan  metode  optimasi  yang  dapat diterapkan  untuk  mengerjakan  penjadwalan  mata  kuliah  ini.  Metode yang  dapat  digunakan  untuk  menyelesaikan  permasalahan  tersebut adalah  dengan  menggunakan  Algoritma  Genetika.  Tugas  Akhir  ini \r\nbertujuan  untuk  membuat  suatu  sistem  yang  dapat  membuat  jadwal matakuliah  secara  otomatis  dan  hasilnya  optimal.  Dari  hasil  penelitian yang  dilakukan  algoritma  genetika  mampu  membuat  jadwal  dengan \r\noptimal  yang  dibuktikan  dari  nilai  fitness  yang memiliki  nilai  1  secara otomatis  jadwal  yang  dibentuk  akan  optimal.  Semoga  adanya  aplikasi ini  diharapkan  bisa  mempermudah  didalam  pembuatan  penjadwalan \r\nmatakuliah dengan mudah dan cepat. \r\n \r\nKata Kunci: Algoritma Genetika, Optimasi,  Penjadwalan.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERAK MENGGUNAKAN FLARTOOLKIT&#39;, &#39;Penulis&#39;: &#39;Septian Rahman Hakim&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Arik Kurniawati, S.Kom., M.T.&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Haryanto, S.T., M.T.&#39;, &#39;Abstrak&#39;: &#39;Seiring perkembangan teknologi yang ada didunia, muncul teknologi yang disebut augmented reality. Augmented Reality (AR) merupakan upaya untuk menggabungkan dunia maya dan dunia virtual yang dibuat melalui komputer sehingga batas antara keduanya menjadi sangat tipis. Head-Mounted Display (HMD) merupakan contoh hasil dari penelitian tentang Augmented Reality, ini merupakan satu-satunya peralatan dasar dalam teknologi-teknologi terbaru. Seiring berjalannya waktu, augmented reality berkembang pesat sehingga memungkinkan pengembangan aplikasi ini di berbagai bidang.\r\n\r\nUntuk mengembangkan AR banyak sekali library pendukung yang dapat digunakan. FlarToolKit adalah salah satunya. FlarToolKit merupakan library pendukung augmented reality pada platform flash.\r\n\r\nBerdasarkan sistem AR animasi benda bergerak yang dibuat adalah animasi bergerak permainan pingpong dimana telah dikolaborasikan dengan augmented reality untuk menggerakkan setiap langkah dari playernya. Interaksi antar obyek tersebut dapat dilihat dari gerak bola yang dapat dipukul dengan obyek virtual yang ditampilkan melalui augmented reality.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \r\nTERDISTRIBUSI MENGGUNAKAN ORACLE STUDI KASUS \r\nSIAKAD UNIVERSITAS TRUNOJOYO&#39;, &#39;Penulis&#39;: &#39;A.Ubaidillah S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Budi Setyono M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan S.T&#39;, &#39;Abstrak&#39;: &#39;Sistem  informasi  akademik  (SIAKAD) merupakan  sistem  informasi  yang  berfungsi  menangani pengelolaan  dan  penyajian  data-data  akademik,  yang  oleh pihak  fakultas  SIAKAD  dianggap  sangat  penting  dalam memberikan  pelayanan  mahasiswa  yang  membutuhkan informasi akademik. Di Universitas Trunojoyo telah tersedia SIAKAD,  namun  masih  menggunakan  database  terpusat. Sistem seperti ini memberikan kelebihan yaitu perawatannya mudah  selain  itu  juga  membutuhkan  sedikit  biaya,  namun sistem  tersebut  juga  berpotensi  mengahadapi  kendala-kendala  yaitu  dalam  proses  transaksi  data  karena  padatnya jaringan yang menuju database SIAKAD, kelambatan dalam pemrosesan  respon  query  dikarenakan  data  yang  tersimpan semakin besar dan pemrosesan semakin kompleks, dan  juga memiliki kelemahan dalam hal ketersediaan data. Untuk  itu sistem  seperti  ini  memerlukan  pengembangan  sistem database  yang  lebih  baik  dengan  menggunakan  sistem databases  terdistribusi  pada  masing-masing  fakultas  yang dapat  dijadikan  solusi  bagi  permasalahan  di  atas.  Karena dalam basisdata terdistribusi terdapat keuntungan yang tidak dimiliki oleh basisdata  terpusat yaitu pengawasan distribusi, reability,  availability,  kecepatan  dalam  pemrosesan  query dan otonomi local&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;APLIKASI KONTROL DAN MONITORING JARINGAN KOMPUTER BERBASIS MOBILE&#39;, &#39;Penulis&#39;: &#39;M. Basith Ardianto,&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, MT&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Koko Joni, ST&#39;, &#39;Abstrak&#39;: &#39;Berjalannya koneksi jaringan komputer dengan lancar dan tanpa gangguan merupakan harapan seluruh penggunanya,\r\nterutama pihak yang bertanggung jawab pada bidang itu, yakni administrator jaringan. Namun tidak selamanya koneksi\r\njaringan dapat berjalan dengan lancar tanpa adanya gangguan. Kenyataan di lapangan terutama pada jaringan komputer skala\r\nbesar, berpotensi besar terjadi gangguan atau bahkan kerusakan koneksi jaringan komputer.\r\nHal ini rata - rata disebabkan banyaknya penggunaan serta padatnya traffic data dalam jaringan komputer itu sendiri.\r\nOleh karena itu untuk menjaga bahkan meningkatkan kualitas layanan koneksi jaringan maka diperlukan adanya akses kontrol\r\ndan monitoring pada level administrator jaringan secara real-time berbasis mobile, yang dapat mengatur dan mengetahui\r\ninformasi tentang koneksi jaringan dan dapat diakses setiap saat.\r\nPihak administrator jaringan dituntut untuk terlebih dahulu mengetahui adanya gangguan atau bahkan terputusnya\r\nkoneksi jaringan walaupun administrator tidak berada di tempat kontrol dan monitoring, Dengan adanya sistem kontrol dan\r\nmonitoring berbasis mobile, diharapkan dapat membantu tugas administrator dalam mengontrol dan memantau jaringan serta\r\ndalam mengambil kebijakan atas node â\x80\x93 node yang terkoneksi pada jaringan yakni memanajemen koneksi, port dan bandwidth\r\nsetiap saat dan secara mobile. agar dengan segera dapat melakukan pembenahan ketika terjadi gangguan jaringan sebelum\r\npemakai jaringan (klien) melakukan pengaduan atas adanya gangguan.\r\nKata Kunci : Administrator Jaringan, Koneksi Jaringan, Akses Kontrol dan Monitoring.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\r\nENKRIPSI KODE HTML MENGGUNAKAN\r\nALGORITMA BLOWFISH&#39;, &#39;Penulis&#39;: &#39;Akhmad Suyandi, S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan, ST, MT&#39;, &#39;Abstrak&#39;: &#39;Web server adalah sebuah perangkat lunak server yang berfungsi\r\nmenerima permintaan HTTP atau HTTPS dari web client dan\r\nmengirimkan jawaban dalam bentuk halaman-halaman web yang\r\numumnya berbentuk dokumen HTML. Dokumen HTML yang dikirim\r\nmerupakan dokumen yang dibentuk dari bahasa markup yang plaintext.\r\nArtinya, dokumen berisi kode-kode HTML murni tanpa proses enkripsi.\r\nTujuan dari penelitan ini adalah membuat sebuah aplikasi proxy\r\nserver yang menerima permintaan HTTP dari web client dan\r\nmeneruskannya ke web server. Kemudian aplikasi ini akan menerima\r\nrespon dari server dan melakukan proses enkripsi pada dokumen HTML\r\nterlebih dahulu. Sehingga dokumen HTML yang dikirim kepada web\r\nclient sudah berbentuk dokumen HTML yang terenkripsi. Web client\r\ndisini bisa berupa aplikasi seperti Internet Explorer, Mozilla Firefox,\r\natau Opera. Aplikasi-aplikasi tersebut biasa dikenal dengan sebutan web\r\nbrowser.\r\nKetika web browser menerima dokumen HTML yang terenkripsi\r\ndari aplikasi proxy server, maka JavaScript Engine yang ada di web\r\nbrowser akan melakukan proses dekripsi sekaligus rendering sehingga\r\ndokumen akan ditampilkan sesuai dengan aslinya. Namun apabila kode\r\ndari dokumen HTML tersebut dilihat melalui menu view source yang\r\nada di web browser akan didapatkan dokumen HTML yang tetap\r\nterenkripsi.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALAN MATAKULIAH UNTUK PENGGUNAAN RUANGAN KULIAH BERSAMA DI UNIVERSITAS TRUNOJOYO MADURA MENGGUNAKAN ALGORITMA  \r\nGENETIKA&#39;, &#39;Penulis&#39;: &#39;Heri Supriyanto&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Mulaab, S.Si., M.Kom&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Firli Irhamni, ST., M.Kom&#39;, &#39;Abstrak&#39;: &#39;Penjadwalan  kuliah  di  Perguruan  Tinggi  merupakan  masalah yang  kompleks.  Dalam  permasalahan tersebut  terdapat  beberapa variabel  yang  harus  dipertimbangkan  supaya  mendapatkan  jadwal  yang \r\noptimal. Di dalam penyusunan jadwal kuliah ini terdapat sangat banyak kemungkinan  yang  selayaknya  dicoba  untuk  menemukan  penjadwalan yang  terbaik.  Karena  itu  dibutuhkan  metode  optimasi  yang  dapat diterapkan  untuk  mengerjakan  penjadwalan  mata  kuliah  ini.  Metode yang  dapat  digunakan  untuk  menyelesaikan  permasalahan  tersebut adalah  dengan  menggunakan  Algoritma  Genetika.  Tugas  Akhir  ini \r\nbertujuan  untuk  membuat  suatu  sistem  yang  dapat  membuat  jadwal matakuliah  secara  otomatis  dan  hasilnya  optimal.  Dari  hasil  penelitian yang  dilakukan  algoritma  genetika  mampu  membuat  jadwal  dengan \r\noptimal  yang  dibuktikan  dari  nilai  fitness  yang memiliki  nilai  1  secara otomatis  jadwal  yang  dibentuk  akan  optimal.  Semoga  adanya  aplikasi ini  diharapkan  bisa  mempermudah  didalam  pembuatan  penjadwalan \r\nmatakuliah dengan mudah dan cepat. \r\n \r\nKata Kunci: Algoritma Genetika, Optimasi,  Penjadwalan.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERAK MENGGUNAKAN FLARTOOLKIT&#39;, &#39;Penulis&#39;: &#39;Septian Rahman Hakim&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Arik Kurniawati, S.Kom., M.T.&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Haryanto, S.T., M.T.&#39;, &#39;Abstrak&#39;: &#39;Seiring perkembangan teknologi yang ada didunia, muncul teknologi yang disebut augmented reality. Augmented Reality (AR) merupakan upaya untuk menggabungkan dunia maya dan dunia virtual yang dibuat melalui komputer sehingga batas antara keduanya menjadi sangat tipis. Head-Mounted Display (HMD) merupakan contoh hasil dari penelitian tentang Augmented Reality, ini merupakan satu-satunya peralatan dasar dalam teknologi-teknologi terbaru. Seiring berjalannya waktu, augmented reality berkembang pesat sehingga memungkinkan pengembangan aplikasi ini di berbagai bidang.\r\n\r\nUntuk mengembangkan AR banyak sekali library pendukung yang dapat digunakan. FlarToolKit adalah salah satunya. FlarToolKit merupakan library pendukung augmented reality pada platform flash.\r\n\r\nBerdasarkan sistem AR animasi benda bergerak yang dibuat adalah animasi bergerak permainan pingpong dimana telah dikolaborasikan dengan augmented reality untuk menggerakkan setiap langkah dari playernya. Interaksi antar obyek tersebut dapat dilihat dari gerak bola yang dapat dipukul dengan obyek virtual yang ditampilkan melalui augmented reality.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \r\nTERDISTRIBUSI MENGGUNAKAN ORACLE STUDI KASUS \r\nSIAKAD UNIVERSITAS TRUNOJOYO&#39;, &#39;Penulis&#39;: &#39;A.Ubaidillah S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Budi Setyono M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan S.T&#39;, &#39;Abstrak&#39;: &#39;Sistem  informasi  akademik  (SIAKAD) merupakan  sistem  informasi  yang  berfungsi  menangani pengelolaan  dan  penyajian  data-data  akademik,  yang  oleh pihak  fakultas  SIAKAD  dianggap  sangat  penting  dalam memberikan  pelayanan  mahasiswa  yang  membutuhkan informasi akademik. Di Universitas Trunojoyo telah tersedia SIAKAD,  namun  masih  menggunakan  database  terpusat. Sistem seperti ini memberikan kelebihan yaitu perawatannya mudah  selain  itu  juga  membutuhkan  sedikit  biaya,  namun sistem  tersebut  juga  berpotensi  mengahadapi  kendala-kendala  yaitu  dalam  proses  transaksi  data  karena  padatnya jaringan yang menuju database SIAKAD, kelambatan dalam pemrosesan  respon  query  dikarenakan  data  yang  tersimpan semakin besar dan pemrosesan semakin kompleks, dan  juga memiliki kelemahan dalam hal ketersediaan data. Untuk  itu sistem  seperti  ini  memerlukan  pengembangan  sistem database  yang  lebih  baik  dengan  menggunakan  sistem databases  terdistribusi  pada  masing-masing  fakultas  yang dapat  dijadikan  solusi  bagi  permasalahan  di  atas.  Karena dalam basisdata terdistribusi terdapat keuntungan yang tidak dimiliki oleh basisdata  terpusat yaitu pengawasan distribusi, reability,  availability,  kecepatan  dalam  pemrosesan  query dan otonomi local&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;APLIKASI KONTROL DAN MONITORING JARINGAN KOMPUTER BERBASIS MOBILE&#39;, &#39;Penulis&#39;: &#39;M. Basith Ardianto,&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, MT&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Koko Joni, ST&#39;, &#39;Abstrak&#39;: &#39;Berjalannya koneksi jaringan komputer dengan lancar dan tanpa gangguan merupakan harapan seluruh penggunanya,\r\nterutama pihak yang bertanggung jawab pada bidang itu, yakni administrator jaringan. Namun tidak selamanya koneksi\r\njaringan dapat berjalan dengan lancar tanpa adanya gangguan. Kenyataan di lapangan terutama pada jaringan komputer skala\r\nbesar, berpotensi besar terjadi gangguan atau bahkan kerusakan koneksi jaringan komputer.\r\nHal ini rata - rata disebabkan banyaknya penggunaan serta padatnya traffic data dalam jaringan komputer itu sendiri.\r\nOleh karena itu untuk menjaga bahkan meningkatkan kualitas layanan koneksi jaringan maka diperlukan adanya akses kontrol\r\ndan monitoring pada level administrator jaringan secara real-time berbasis mobile, yang dapat mengatur dan mengetahui\r\ninformasi tentang koneksi jaringan dan dapat diakses setiap saat.\r\nPihak administrator jaringan dituntut untuk terlebih dahulu mengetahui adanya gangguan atau bahkan terputusnya\r\nkoneksi jaringan walaupun administrator tidak berada di tempat kontrol dan monitoring, Dengan adanya sistem kontrol dan\r\nmonitoring berbasis mobile, diharapkan dapat membantu tugas administrator dalam mengontrol dan memantau jaringan serta\r\ndalam mengambil kebijakan atas node â\x80\x93 node yang terkoneksi pada jaringan yakni memanajemen koneksi, port dan bandwidth\r\nsetiap saat dan secara mobile. agar dengan segera dapat melakukan pembenahan ketika terjadi gangguan jaringan sebelum\r\npemakai jaringan (klien) melakukan pengaduan atas adanya gangguan.\r\nKata Kunci : Administrator Jaringan, Koneksi Jaringan, Akses Kontrol dan Monitoring.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\r\nENKRIPSI KODE HTML MENGGUNAKAN\r\nALGORITMA BLOWFISH&#39;, &#39;Penulis&#39;: &#39;Akhmad Suyandi, S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan, ST, MT&#39;, &#39;Abstrak&#39;: &#39;Web server adalah sebuah perangkat lunak server yang berfungsi\r\nmenerima permintaan HTTP atau HTTPS dari web client dan\r\nmengirimkan jawaban dalam bentuk halaman-halaman web yang\r\numumnya berbentuk dokumen HTML. Dokumen HTML yang dikirim\r\nmerupakan dokumen yang dibentuk dari bahasa markup yang plaintext.\r\nArtinya, dokumen berisi kode-kode HTML murni tanpa proses enkripsi.\r\nTujuan dari penelitan ini adalah membuat sebuah aplikasi proxy\r\nserver yang menerima permintaan HTTP dari web client dan\r\nmeneruskannya ke web server. Kemudian aplikasi ini akan menerima\r\nrespon dari server dan melakukan proses enkripsi pada dokumen HTML\r\nterlebih dahulu. Sehingga dokumen HTML yang dikirim kepada web\r\nclient sudah berbentuk dokumen HTML yang terenkripsi. Web client\r\ndisini bisa berupa aplikasi seperti Internet Explorer, Mozilla Firefox,\r\natau Opera. Aplikasi-aplikasi tersebut biasa dikenal dengan sebutan web\r\nbrowser.\r\nKetika web browser menerima dokumen HTML yang terenkripsi\r\ndari aplikasi proxy server, maka JavaScript Engine yang ada di web\r\nbrowser akan melakukan proses dekripsi sekaligus rendering sehingga\r\ndokumen akan ditampilkan sesuai dengan aslinya. Namun apabila kode\r\ndari dokumen HTML tersebut dilihat melalui menu view source yang\r\nada di web browser akan didapatkan dokumen HTML yang tetap\r\nterenkripsi.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALAN MATAKULIAH UNTUK PENGGUNAAN RUANGAN KULIAH BERSAMA DI UNIVERSITAS TRUNOJOYO MADURA MENGGUNAKAN ALGORITMA  \r\nGENETIKA&#39;, &#39;Penulis&#39;: &#39;Heri Supriyanto&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Mulaab, S.Si., M.Kom&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Firli Irhamni, ST., M.Kom&#39;, &#39;Abstrak&#39;: &#39;Penjadwalan  kuliah  di  Perguruan  Tinggi  merupakan  masalah yang  kompleks.  Dalam  permasalahan tersebut  terdapat  beberapa variabel  yang  harus  dipertimbangkan  supaya  mendapatkan  jadwal  yang \r\noptimal. Di dalam penyusunan jadwal kuliah ini terdapat sangat banyak kemungkinan  yang  selayaknya  dicoba  untuk  menemukan  penjadwalan yang  terbaik.  Karena  itu  dibutuhkan  metode  optimasi  yang  dapat diterapkan  untuk  mengerjakan  penjadwalan  mata  kuliah  ini.  Metode yang  dapat  digunakan  untuk  menyelesaikan  permasalahan  tersebut adalah  dengan  menggunakan  Algoritma  Genetika.  Tugas  Akhir  ini \r\nbertujuan  untuk  membuat  suatu  sistem  yang  dapat  membuat  jadwal matakuliah  secara  otomatis  dan  hasilnya  optimal.  Dari  hasil  penelitian yang  dilakukan  algoritma  genetika  mampu  membuat  jadwal  dengan \r\noptimal  yang  dibuktikan  dari  nilai  fitness  yang memiliki  nilai  1  secara otomatis  jadwal  yang  dibentuk  akan  optimal.  Semoga  adanya  aplikasi ini  diharapkan  bisa  mempermudah  didalam  pembuatan  penjadwalan \r\nmatakuliah dengan mudah dan cepat. \r\n \r\nKata Kunci: Algoritma Genetika, Optimasi,  Penjadwalan.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERAK MENGGUNAKAN FLARTOOLKIT&#39;, &#39;Penulis&#39;: &#39;Septian Rahman Hakim&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Arik Kurniawati, S.Kom., M.T.&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Haryanto, S.T., M.T.&#39;, &#39;Abstrak&#39;: &#39;Seiring perkembangan teknologi yang ada didunia, muncul teknologi yang disebut augmented reality. Augmented Reality (AR) merupakan upaya untuk menggabungkan dunia maya dan dunia virtual yang dibuat melalui komputer sehingga batas antara keduanya menjadi sangat tipis. Head-Mounted Display (HMD) merupakan contoh hasil dari penelitian tentang Augmented Reality, ini merupakan satu-satunya peralatan dasar dalam teknologi-teknologi terbaru. Seiring berjalannya waktu, augmented reality berkembang pesat sehingga memungkinkan pengembangan aplikasi ini di berbagai bidang.\r\n\r\nUntuk mengembangkan AR banyak sekali library pendukung yang dapat digunakan. FlarToolKit adalah salah satunya. FlarToolKit merupakan library pendukung augmented reality pada platform flash.\r\n\r\nBerdasarkan sistem AR animasi benda bergerak yang dibuat adalah animasi bergerak permainan pingpong dimana telah dikolaborasikan dengan augmented reality untuk menggerakkan setiap langkah dari playernya. Interaksi antar obyek tersebut dapat dilihat dari gerak bola yang dapat dipukul dengan obyek virtual yang ditampilkan melalui augmented reality.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \r\nTERDISTRIBUSI MENGGUNAKAN ORACLE STUDI KASUS \r\nSIAKAD UNIVERSITAS TRUNOJOYO&#39;, &#39;Penulis&#39;: &#39;A.Ubaidillah S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Budi Setyono M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan S.T&#39;, &#39;Abstrak&#39;: &#39;Sistem  informasi  akademik  (SIAKAD) merupakan  sistem  informasi  yang  berfungsi  menangani pengelolaan  dan  penyajian  data-data  akademik,  yang  oleh pihak  fakultas  SIAKAD  dianggap  sangat  penting  dalam memberikan  pelayanan  mahasiswa  yang  membutuhkan informasi akademik. Di Universitas Trunojoyo telah tersedia SIAKAD,  namun  masih  menggunakan  database  terpusat. Sistem seperti ini memberikan kelebihan yaitu perawatannya mudah  selain  itu  juga  membutuhkan  sedikit  biaya,  namun sistem  tersebut  juga  berpotensi  mengahadapi  kendala-kendala  yaitu  dalam  proses  transaksi  data  karena  padatnya jaringan yang menuju database SIAKAD, kelambatan dalam pemrosesan  respon  query  dikarenakan  data  yang  tersimpan semakin besar dan pemrosesan semakin kompleks, dan  juga memiliki kelemahan dalam hal ketersediaan data. Untuk  itu sistem  seperti  ini  memerlukan  pengembangan  sistem database  yang  lebih  baik  dengan  menggunakan  sistem databases  terdistribusi  pada  masing-masing  fakultas  yang dapat  dijadikan  solusi  bagi  permasalahan  di  atas.  Karena dalam basisdata terdistribusi terdapat keuntungan yang tidak dimiliki oleh basisdata  terpusat yaitu pengawasan distribusi, reability,  availability,  kecepatan  dalam  pemrosesan  query dan otonomi local&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;APLIKASI KONTROL DAN MONITORING JARINGAN KOMPUTER BERBASIS MOBILE&#39;, &#39;Penulis&#39;: &#39;M. Basith Ardianto,&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, MT&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Koko Joni, ST&#39;, &#39;Abstrak&#39;: &#39;Berjalannya koneksi jaringan komputer dengan lancar dan tanpa gangguan merupakan harapan seluruh penggunanya,\r\nterutama pihak yang bertanggung jawab pada bidang itu, yakni administrator jaringan. Namun tidak selamanya koneksi\r\njaringan dapat berjalan dengan lancar tanpa adanya gangguan. Kenyataan di lapangan terutama pada jaringan komputer skala\r\nbesar, berpotensi besar terjadi gangguan atau bahkan kerusakan koneksi jaringan komputer.\r\nHal ini rata - rata disebabkan banyaknya penggunaan serta padatnya traffic data dalam jaringan komputer itu sendiri.\r\nOleh karena itu untuk menjaga bahkan meningkatkan kualitas layanan koneksi jaringan maka diperlukan adanya akses kontrol\r\ndan monitoring pada level administrator jaringan secara real-time berbasis mobile, yang dapat mengatur dan mengetahui\r\ninformasi tentang koneksi jaringan dan dapat diakses setiap saat.\r\nPihak administrator jaringan dituntut untuk terlebih dahulu mengetahui adanya gangguan atau bahkan terputusnya\r\nkoneksi jaringan walaupun administrator tidak berada di tempat kontrol dan monitoring, Dengan adanya sistem kontrol dan\r\nmonitoring berbasis mobile, diharapkan dapat membantu tugas administrator dalam mengontrol dan memantau jaringan serta\r\ndalam mengambil kebijakan atas node â\x80\x93 node yang terkoneksi pada jaringan yakni memanajemen koneksi, port dan bandwidth\r\nsetiap saat dan secara mobile. agar dengan segera dapat melakukan pembenahan ketika terjadi gangguan jaringan sebelum\r\npemakai jaringan (klien) melakukan pengaduan atas adanya gangguan.\r\nKata Kunci : Administrator Jaringan, Koneksi Jaringan, Akses Kontrol dan Monitoring.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\r\nENKRIPSI KODE HTML MENGGUNAKAN\r\nALGORITMA BLOWFISH&#39;, &#39;Penulis&#39;: &#39;Akhmad Suyandi, S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan, ST, MT&#39;, &#39;Abstrak&#39;: &#39;Web server adalah sebuah perangkat lunak server yang berfungsi\r\nmenerima permintaan HTTP atau HTTPS dari web client dan\r\nmengirimkan jawaban dalam bentuk halaman-halaman web yang\r\numumnya berbentuk dokumen HTML. Dokumen HTML yang dikirim\r\nmerupakan dokumen yang dibentuk dari bahasa markup yang plaintext.\r\nArtinya, dokumen berisi kode-kode HTML murni tanpa proses enkripsi.\r\nTujuan dari penelitan ini adalah membuat sebuah aplikasi proxy\r\nserver yang menerima permintaan HTTP dari web client dan\r\nmeneruskannya ke web server. Kemudian aplikasi ini akan menerima\r\nrespon dari server dan melakukan proses enkripsi pada dokumen HTML\r\nterlebih dahulu. Sehingga dokumen HTML yang dikirim kepada web\r\nclient sudah berbentuk dokumen HTML yang terenkripsi. Web client\r\ndisini bisa berupa aplikasi seperti Internet Explorer, Mozilla Firefox,\r\natau Opera. Aplikasi-aplikasi tersebut biasa dikenal dengan sebutan web\r\nbrowser.\r\nKetika web browser menerima dokumen HTML yang terenkripsi\r\ndari aplikasi proxy server, maka JavaScript Engine yang ada di web\r\nbrowser akan melakukan proses dekripsi sekaligus rendering sehingga\r\ndokumen akan ditampilkan sesuai dengan aslinya. Namun apabila kode\r\ndari dokumen HTML tersebut dilihat melalui menu view source yang\r\nada di web browser akan didapatkan dokumen HTML yang tetap\r\nterenkripsi.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALAN MATAKULIAH UNTUK PENGGUNAAN RUANGAN KULIAH BERSAMA DI UNIVERSITAS TRUNOJOYO MADURA MENGGUNAKAN ALGORITMA  \r\nGENETIKA&#39;, &#39;Penulis&#39;: &#39;Heri Supriyanto&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Mulaab, S.Si., M.Kom&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Firli Irhamni, ST., M.Kom&#39;, &#39;Abstrak&#39;: &#39;Penjadwalan  kuliah  di  Perguruan  Tinggi  merupakan  masalah yang  kompleks.  Dalam  permasalahan tersebut  terdapat  beberapa variabel  yang  harus  dipertimbangkan  supaya  mendapatkan  jadwal  yang \r\noptimal. Di dalam penyusunan jadwal kuliah ini terdapat sangat banyak kemungkinan  yang  selayaknya  dicoba  untuk  menemukan  penjadwalan yang  terbaik.  Karena  itu  dibutuhkan  metode  optimasi  yang  dapat diterapkan  untuk  mengerjakan  penjadwalan  mata  kuliah  ini.  Metode yang  dapat  digunakan  untuk  menyelesaikan  permasalahan  tersebut adalah  dengan  menggunakan  Algoritma  Genetika.  Tugas  Akhir  ini \r\nbertujuan  untuk  membuat  suatu  sistem  yang  dapat  membuat  jadwal matakuliah  secara  otomatis  dan  hasilnya  optimal.  Dari  hasil  penelitian yang  dilakukan  algoritma  genetika  mampu  membuat  jadwal  dengan \r\noptimal  yang  dibuktikan  dari  nilai  fitness  yang memiliki  nilai  1  secara otomatis  jadwal  yang  dibentuk  akan  optimal.  Semoga  adanya  aplikasi ini  diharapkan  bisa  mempermudah  didalam  pembuatan  penjadwalan \r\nmatakuliah dengan mudah dan cepat. \r\n \r\nKata Kunci: Algoritma Genetika, Optimasi,  Penjadwalan.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERAK MENGGUNAKAN FLARTOOLKIT&#39;, &#39;Penulis&#39;: &#39;Septian Rahman Hakim&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Arik Kurniawati, S.Kom., M.T.&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Haryanto, S.T., M.T.&#39;, &#39;Abstrak&#39;: &#39;Seiring perkembangan teknologi yang ada didunia, muncul teknologi yang disebut augmented reality. Augmented Reality (AR) merupakan upaya untuk menggabungkan dunia maya dan dunia virtual yang dibuat melalui komputer sehingga batas antara keduanya menjadi sangat tipis. Head-Mounted Display (HMD) merupakan contoh hasil dari penelitian tentang Augmented Reality, ini merupakan satu-satunya peralatan dasar dalam teknologi-teknologi terbaru. Seiring berjalannya waktu, augmented reality berkembang pesat sehingga memungkinkan pengembangan aplikasi ini di berbagai bidang.\r\n\r\nUntuk mengembangkan AR banyak sekali library pendukung yang dapat digunakan. FlarToolKit adalah salah satunya. FlarToolKit merupakan library pendukung augmented reality pada platform flash.\r\n\r\nBerdasarkan sistem AR animasi benda bergerak yang dibuat adalah animasi bergerak permainan pingpong dimana telah dikolaborasikan dengan augmented reality untuk menggerakkan setiap langkah dari playernya. Interaksi antar obyek tersebut dapat dilihat dari gerak bola yang dapat dipukul dengan obyek virtual yang ditampilkan melalui augmented reality.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \r\nTERDISTRIBUSI MENGGUNAKAN ORACLE STUDI KASUS \r\nSIAKAD UNIVERSITAS TRUNOJOYO&#39;, &#39;Penulis&#39;: &#39;A.Ubaidillah S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Budi Setyono M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan S.T&#39;, &#39;Abstrak&#39;: &#39;Sistem  informasi  akademik  (SIAKAD) merupakan  sistem  informasi  yang  berfungsi  menangani pengelolaan  dan  penyajian  data-data  akademik,  yang  oleh pihak  fakultas  SIAKAD  dianggap  sangat  penting  dalam memberikan  pelayanan  mahasiswa  yang  membutuhkan informasi akademik. Di Universitas Trunojoyo telah tersedia SIAKAD,  namun  masih  menggunakan  database  terpusat. Sistem seperti ini memberikan kelebihan yaitu perawatannya mudah  selain  itu  juga  membutuhkan  sedikit  biaya,  namun sistem  tersebut  juga  berpotensi  mengahadapi  kendala-kendala  yaitu  dalam  proses  transaksi  data  karena  padatnya jaringan yang menuju database SIAKAD, kelambatan dalam pemrosesan  respon  query  dikarenakan  data  yang  tersimpan semakin besar dan pemrosesan semakin kompleks, dan  juga memiliki kelemahan dalam hal ketersediaan data. Untuk  itu sistem  seperti  ini  memerlukan  pengembangan  sistem database  yang  lebih  baik  dengan  menggunakan  sistem databases  terdistribusi  pada  masing-masing  fakultas  yang dapat  dijadikan  solusi  bagi  permasalahan  di  atas.  Karena dalam basisdata terdistribusi terdapat keuntungan yang tidak dimiliki oleh basisdata  terpusat yaitu pengawasan distribusi, reability,  availability,  kecepatan  dalam  pemrosesan  query dan otonomi local&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;APLIKASI KONTROL DAN MONITORING JARINGAN KOMPUTER BERBASIS MOBILE&#39;, &#39;Penulis&#39;: &#39;M. Basith Ardianto,&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, MT&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Koko Joni, ST&#39;, &#39;Abstrak&#39;: &#39;Berjalannya koneksi jaringan komputer dengan lancar dan tanpa gangguan merupakan harapan seluruh penggunanya,\r\nterutama pihak yang bertanggung jawab pada bidang itu, yakni administrator jaringan. Namun tidak selamanya koneksi\r\njaringan dapat berjalan dengan lancar tanpa adanya gangguan. Kenyataan di lapangan terutama pada jaringan komputer skala\r\nbesar, berpotensi besar terjadi gangguan atau bahkan kerusakan koneksi jaringan komputer.\r\nHal ini rata - rata disebabkan banyaknya penggunaan serta padatnya traffic data dalam jaringan komputer itu sendiri.\r\nOleh karena itu untuk menjaga bahkan meningkatkan kualitas layanan koneksi jaringan maka diperlukan adanya akses kontrol\r\ndan monitoring pada level administrator jaringan secara real-time berbasis mobile, yang dapat mengatur dan mengetahui\r\ninformasi tentang koneksi jaringan dan dapat diakses setiap saat.\r\nPihak administrator jaringan dituntut untuk terlebih dahulu mengetahui adanya gangguan atau bahkan terputusnya\r\nkoneksi jaringan walaupun administrator tidak berada di tempat kontrol dan monitoring, Dengan adanya sistem kontrol dan\r\nmonitoring berbasis mobile, diharapkan dapat membantu tugas administrator dalam mengontrol dan memantau jaringan serta\r\ndalam mengambil kebijakan atas node â\x80\x93 node yang terkoneksi pada jaringan yakni memanajemen koneksi, port dan bandwidth\r\nsetiap saat dan secara mobile. agar dengan segera dapat melakukan pembenahan ketika terjadi gangguan jaringan sebelum\r\npemakai jaringan (klien) melakukan pengaduan atas adanya gangguan.\r\nKata Kunci : Administrator Jaringan, Koneksi Jaringan, Akses Kontrol dan Monitoring.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\r\nENKRIPSI KODE HTML MENGGUNAKAN\r\nALGORITMA BLOWFISH&#39;, &#39;Penulis&#39;: &#39;Akhmad Suyandi, S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan, ST, MT&#39;, &#39;Abstrak&#39;: &#39;Web server adalah sebuah perangkat lunak server yang berfungsi\r\nmenerima permintaan HTTP atau HTTPS dari web client dan\r\nmengirimkan jawaban dalam bentuk halaman-halaman web yang\r\numumnya berbentuk dokumen HTML. Dokumen HTML yang dikirim\r\nmerupakan dokumen yang dibentuk dari bahasa markup yang plaintext.\r\nArtinya, dokumen berisi kode-kode HTML murni tanpa proses enkripsi.\r\nTujuan dari penelitan ini adalah membuat sebuah aplikasi proxy\r\nserver yang menerima permintaan HTTP dari web client dan\r\nmeneruskannya ke web server. Kemudian aplikasi ini akan menerima\r\nrespon dari server dan melakukan proses enkripsi pada dokumen HTML\r\nterlebih dahulu. Sehingga dokumen HTML yang dikirim kepada web\r\nclient sudah berbentuk dokumen HTML yang terenkripsi. Web client\r\ndisini bisa berupa aplikasi seperti Internet Explorer, Mozilla Firefox,\r\natau Opera. Aplikasi-aplikasi tersebut biasa dikenal dengan sebutan web\r\nbrowser.\r\nKetika web browser menerima dokumen HTML yang terenkripsi\r\ndari aplikasi proxy server, maka JavaScript Engine yang ada di web\r\nbrowser akan melakukan proses dekripsi sekaligus rendering sehingga\r\ndokumen akan ditampilkan sesuai dengan aslinya. Namun apabila kode\r\ndari dokumen HTML tersebut dilihat melalui menu view source yang\r\nada di web browser akan didapatkan dokumen HTML yang tetap\r\nterenkripsi.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALAN MATAKULIAH UNTUK PENGGUNAAN RUANGAN KULIAH BERSAMA DI UNIVERSITAS TRUNOJOYO MADURA MENGGUNAKAN ALGORITMA  \r\nGENETIKA&#39;, &#39;Penulis&#39;: &#39;Heri Supriyanto&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Mulaab, S.Si., M.Kom&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Firli Irhamni, ST., M.Kom&#39;, &#39;Abstrak&#39;: &#39;Penjadwalan  kuliah  di  Perguruan  Tinggi  merupakan  masalah yang  kompleks.  Dalam  permasalahan tersebut  terdapat  beberapa variabel  yang  harus  dipertimbangkan  supaya  mendapatkan  jadwal  yang \r\noptimal. Di dalam penyusunan jadwal kuliah ini terdapat sangat banyak kemungkinan  yang  selayaknya  dicoba  untuk  menemukan  penjadwalan yang  terbaik.  Karena  itu  dibutuhkan  metode  optimasi  yang  dapat diterapkan  untuk  mengerjakan  penjadwalan  mata  kuliah  ini.  Metode yang  dapat  digunakan  untuk  menyelesaikan  permasalahan  tersebut adalah  dengan  menggunakan  Algoritma  Genetika.  Tugas  Akhir  ini \r\nbertujuan  untuk  membuat  suatu  sistem  yang  dapat  membuat  jadwal matakuliah  secara  otomatis  dan  hasilnya  optimal.  Dari  hasil  penelitian yang  dilakukan  algoritma  genetika  mampu  membuat  jadwal  dengan \r\noptimal  yang  dibuktikan  dari  nilai  fitness  yang memiliki  nilai  1  secara otomatis  jadwal  yang  dibentuk  akan  optimal.  Semoga  adanya  aplikasi ini  diharapkan  bisa  mempermudah  didalam  pembuatan  penjadwalan \r\nmatakuliah dengan mudah dan cepat. \r\n \r\nKata Kunci: Algoritma Genetika, Optimasi,  Penjadwalan.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERAK MENGGUNAKAN FLARTOOLKIT&#39;, &#39;Penulis&#39;: &#39;Septian Rahman Hakim&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Arik Kurniawati, S.Kom., M.T.&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Haryanto, S.T., M.T.&#39;, &#39;Abstrak&#39;: &#39;Seiring perkembangan teknologi yang ada didunia, muncul teknologi yang disebut augmented reality. Augmented Reality (AR) merupakan upaya untuk menggabungkan dunia maya dan dunia virtual yang dibuat melalui komputer sehingga batas antara keduanya menjadi sangat tipis. Head-Mounted Display (HMD) merupakan contoh hasil dari penelitian tentang Augmented Reality, ini merupakan satu-satunya peralatan dasar dalam teknologi-teknologi terbaru. Seiring berjalannya waktu, augmented reality berkembang pesat sehingga memungkinkan pengembangan aplikasi ini di berbagai bidang.\r\n\r\nUntuk mengembangkan AR banyak sekali library pendukung yang dapat digunakan. FlarToolKit adalah salah satunya. FlarToolKit merupakan library pendukung augmented reality pada platform flash.\r\n\r\nBerdasarkan sistem AR animasi benda bergerak yang dibuat adalah animasi bergerak permainan pingpong dimana telah dikolaborasikan dengan augmented reality untuk menggerakkan setiap langkah dari playernya. Interaksi antar obyek tersebut dapat dilihat dari gerak bola yang dapat dipukul dengan obyek virtual yang ditampilkan melalui augmented reality.&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \r\nTERDISTRIBUSI MENGGUNAKAN ORACLE STUDI KASUS \r\nSIAKAD UNIVERSITAS TRUNOJOYO&#39;, &#39;Penulis&#39;: &#39;A.Ubaidillah S.Kom&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Budi Setyono M.T&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Hermawan S.T&#39;, &#39;Abstrak&#39;: &#39;Sistem  informasi  akademik  (SIAKAD) merupakan  sistem  informasi  yang  berfungsi  menangani pengelolaan  dan  penyajian  data-data  akademik,  yang  oleh pihak  fakultas  SIAKAD  dianggap  sangat  penting  dalam memberikan  pelayanan  mahasiswa  yang  membutuhkan informasi akademik. Di Universitas Trunojoyo telah tersedia SIAKAD,  namun  masih  menggunakan  database  terpusat. Sistem seperti ini memberikan kelebihan yaitu perawatannya mudah  selain  itu  juga  membutuhkan  sedikit  biaya,  namun sistem  tersebut  juga  berpotensi  mengahadapi  kendala-kendala  yaitu  dalam  proses  transaksi  data  karena  padatnya jaringan yang menuju database SIAKAD, kelambatan dalam pemrosesan  respon  query  dikarenakan  data  yang  tersimpan semakin besar dan pemrosesan semakin kompleks, dan  juga memiliki kelemahan dalam hal ketersediaan data. Untuk  itu sistem  seperti  ini  memerlukan  pengembangan  sistem database  yang  lebih  baik  dengan  menggunakan  sistem databases  terdistribusi  pada  masing-masing  fakultas  yang dapat  dijadikan  solusi  bagi  permasalahan  di  atas.  Karena dalam basisdata terdistribusi terdapat keuntungan yang tidak dimiliki oleh basisdata  terpusat yaitu pengawasan distribusi, reability,  availability,  kecepatan  dalam  pemrosesan  query dan otonomi local&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditambahkan: {&#39;Judul&#39;: &#39;APLIKASI KONTROL DAN MONITORING JARINGAN KOMPUTER BERBASIS MOBILE&#39;, &#39;Penulis&#39;: &#39;M. Basith Ardianto,&#39;, &#39;Dosen Pembimbing I&#39;: &#39;Drs. Budi Soesilo, MT&#39;, &#39;Dosen Pembimbing II&#39;: &#39;Koko Joni, ST&#39;, &#39;Abstrak&#39;: &#39;Berjalannya koneksi jaringan komputer dengan lancar dan tanpa gangguan merupakan harapan seluruh penggunanya,\r\nterutama pihak yang bertanggung jawab pada bidang itu, yakni administrator jaringan. Namun tidak selamanya koneksi\r\njaringan dapat berjalan dengan lancar tanpa adanya gangguan. Kenyataan di lapangan terutama pada jaringan komputer skala\r\nbesar, berpotensi besar terjadi gangguan atau bahkan kerusakan koneksi jaringan komputer.\r\nHal ini rata - rata disebabkan banyaknya penggunaan serta padatnya traffic data dalam jaringan komputer itu sendiri.\r\nOleh karena itu untuk menjaga bahkan meningkatkan kualitas layanan koneksi jaringan maka diperlukan adanya akses kontrol\r\ndan monitoring pada level administrator jaringan secara real-time berbasis mobile, yang dapat mengatur dan mengetahui\r\ninformasi tentang koneksi jaringan dan dapat diakses setiap saat.\r\nPihak administrator jaringan dituntut untuk terlebih dahulu mengetahui adanya gangguan atau bahkan terputusnya\r\nkoneksi jaringan walaupun administrator tidak berada di tempat kontrol dan monitoring, Dengan adanya sistem kontrol dan\r\nmonitoring berbasis mobile, diharapkan dapat membantu tugas administrator dalam mengontrol dan memantau jaringan serta\r\ndalam mengambil kebijakan atas node â\x80\x93 node yang terkoneksi pada jaringan yakni memanajemen koneksi, port dan bandwidth\r\nsetiap saat dan secara mobile. agar dengan segera dapat melakukan pembenahan ketika terjadi gangguan jaringan sebelum\r\npemakai jaringan (klien) melakukan pengaduan atas adanya gangguan.\r\nKata Kunci : Administrator Jaringan, Koneksi Jaringan, Akses Kontrol dan Monitoring.&#39;}
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-2-a43fef33838a&gt;</span> in <span class="ni">&lt;cell line: 7&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span>             <span class="k">if</span> <span class="n">abstrak_button</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span>                 <span class="n">abstrak_link</span> <span class="o">=</span> <span class="n">abstrak_button</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+<span class="ne">---&gt; </span><span class="mi">39</span>                 <span class="n">abstrak_req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">abstrak_link</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span>                 <span class="n">abstrak_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">abstrak_req</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>                 <span class="n">abstrak</span> <span class="o">=</span> <span class="n">abstrak_soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;justify&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span><span class="s2"> </span>
+<span class="ne">---&gt; </span><span class="mi">73</span><span class="s2">     return request(&quot;get&quot;, url, params=params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="s2">     # cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="s2">     with sessions.Session() as session:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span><span class="s2">         return session.request(method=method, url=url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span><span class="s2">         }</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span><span class="s2">         send_kwargs.update(settings)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span><span class="s2">         resp = self.send(prep, **send_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">590</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span><span class="s2">         return resp</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">         # Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">703</span><span class="s2">         r = adapter.send(request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">         # Total elapsed time of the request (approximately)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">484</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">485</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">486</span><span class="s2">             resp = conn.urlopen(</span>
+<span class="g g-Whitespace">    </span><span class="mi">487</span><span class="s2">                 method=request.method,</span>
+<span class="g g-Whitespace">    </span><span class="mi">488</span><span class="s2">                 url=url,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span><span class="s2">             # Make the request on the HTTPConnection object</span>
+<span class="ne">--&gt; </span><span class="mi">791</span><span class="s2">             response = self._make_request(</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span><span class="s2">                 conn,</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span><span class="s2">                 method,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span><span class="s2">         # Receive the response from the server</span>
+<span class="g g-Whitespace">    </span><span class="mi">536</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">537</span><span class="s2">             response = conn.getresponse()</span>
+<span class="g g-Whitespace">    </span><span class="mi">538</span><span class="s2">         except (BaseSSLError, OSError) as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">539</span><span class="s2">             self._raise_timeout(err=e, url=url, timeout_value=read_timeout)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">459</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">460</span><span class="s2">         # Get the response from http.client.HTTPConnection</span>
+<span class="ne">--&gt; </span><span class="mi">461</span><span class="s2">         httplib_response = super().getresponse()</span>
+<span class="g g-Whitespace">    </span><span class="mi">462</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span><span class="s2">         try:</span>
+
+<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1373</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1374</span><span class="s2">             try:</span>
+<span class="ne">-&gt; </span><span class="mi">1375</span><span class="s2">                 response.begin()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1376</span><span class="s2">             except ConnectionError:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1377</span><span class="s2">                 self.close()</span>
+
+<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">begin</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">316</span><span class="s2">         # read until we get a non-100 response</span>
+<span class="g g-Whitespace">    </span><span class="mi">317</span><span class="s2">         while True:</span>
+<span class="ne">--&gt; </span><span class="mi">318</span><span class="s2">             version, status, reason = self._read_status()</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="s2">             if status != CONTINUE:</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span><span class="s2">                 break</span>
+
+<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span><span class="s2">     def _read_status(self):</span>
+<span class="ne">--&gt; </span><span class="mi">279</span><span class="s2">         line = str(self.fp.readline(_MAXLINE + 1), &quot;iso-8859-1&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span><span class="s2">         if len(line) &gt; _MAXLINE:</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span><span class="s2">             raise LineTooLong(&quot;status line&quot;)</span>
+
+<span class="nn">/usr/lib/python3.10/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">         while True:</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">705</span><span class="s2">                 return self._sock.recv_into(b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span><span class="s2">             except timeout:</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span><span class="s2">                 self._timeout_occurred = True</span>
+
+<span class="nn">/usr/lib/python3.10/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1301</span><span class="s2">                   &quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot; %</span>
+<span class="g g-Whitespace">   </span><span class="mi">1302</span><span class="s2">                   self.__class__)</span>
+<span class="ne">-&gt; </span><span class="mi">1303</span><span class="s2">             return self.read(nbytes, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1304</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1305</span><span class="s2">             return super().recv_into(buffer, nbytes, flags)</span>
+
+<span class="nn">/usr/lib/python3.10/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1157</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1158</span><span class="s2">             if buffer is not None:</span>
+<span class="ne">-&gt; </span><span class="mi">1159</span><span class="s2">                 return self._sslobj.read(len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1160</span><span class="s2">             else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1161</span><span class="s2">                 return self._sslobj.read(len)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="normalisasi-text">
+<h1>Normalisasi Text<a class="headerlink" href="#normalisasi-text" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hasil_scraping.csv&#39;</span><span class="p">)</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(200, 5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-52a3a2f5-b59d-47b3-b589-a30a9aa40ad7" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Penulis</th>
+      <th>Dosen Pembimbing I</th>
+      <th>Dosen Pembimbing II</th>
+      <th>Abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \...</td>
+      <td>A.Ubaidillah S.Kom</td>
+      <td>Budi Setyono M.T</td>
+      <td>Hermawan S.T</td>
+      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
+      <td>M. Basith Ardianto,</td>
+      <td>Drs. Budi Soesilo, MT</td>
+      <td>Koko Joni, ST</td>
+      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\r\n...</td>
+      <td>Akhmad Suyandi, S.Kom</td>
+      <td>Drs. Budi Soesilo, M.T</td>
+      <td>Hermawan, ST, MT</td>
+      <td>Web server adalah sebuah perangkat lunak serve...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
+      <td>Heri Supriyanto</td>
+      <td>Mulaab, S.Si., M.Kom</td>
+      <td>Firli Irhamni, ST., M.Kom</td>
+      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
+      <td>Septian Rahman Hakim</td>
+      <td>Arik Kurniawati, S.Kom., M.T.</td>
+      <td>Haryanto, S.T., M.T.</td>
+      <td>Seiring perkembangan teknologi yang ada diduni...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-52a3a2f5-b59d-47b3-b589-a30a9aa40ad7')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-52a3a2f5-b59d-47b3-b589-a30a9aa40ad7 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-52a3a2f5-b59d-47b3-b589-a30a9aa40ad7');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-c8c2c03c-4fed-465d-b48b-65991c4c70bc">
+  <button class="colab-df-quickchart" onclick="quickchart('df-c8c2c03c-4fed-465d-b48b-65991c4c70bc')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-c8c2c03c-4fed-465d-b48b-65991c4c70bc button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">PorterStemmer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+
+<span class="c1"># Import stopwords dalam bahasa Indonesia</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">))</span>
+
+<span class="c1"># Function untuk menghapus tanda baca dan stopwords</span>
+<span class="k">def</span> <span class="nf">preprocess_text</span><span class="p">(</span><span class="n">teks</span><span class="p">):</span>
+    <span class="c1"># Punctuation process (Hapus tanda baca)</span>
+    <span class="n">teks_clean</span> <span class="o">=</span> <span class="n">teks</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
+
+    <span class="c1"># Tokenisasi</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">teks_clean</span><span class="p">)</span>
+
+    <span class="c1"># stopwords</span>
+    <span class="n">teks_cleaned</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+
+    <span class="c1"># Stemming</span>
+    <span class="n">stemmer</span> <span class="o">=</span> <span class="n">PorterStemmer</span><span class="p">()</span>
+    <span class="n">stemmed_tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">teks_cleaned</span><span class="p">]</span>
+
+    <span class="c1"># Gabungkan kembali tokens menjadi teks</span>
+    <span class="n">teks_final</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stemmed_tokens</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">teks_final</span>
+
+<span class="c1"># Hapus tanda baca dan stopwords dari kolom &#39;abstrak&#39;</span>
+<span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;abstrak_cleaned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;Abstrak&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">preprocess_text</span><span class="p">)</span>
+<span class="n">ab</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:</span><span class="mi">15</span><span class="p">][</span><span class="s1">&#39;abstrak_cleaned&#39;</span><span class="p">]</span>
+
+<span class="c1"># Ekstraksi fitur dan membentuk VSM dalam term frequency</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">count_matrix</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">ab</span><span class="p">)</span>
+<span class="c1"># print(count_matrix)</span>
+<span class="n">count_array</span> <span class="o">=</span> <span class="n">count_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">df_term</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">count_array</span><span class="p">,</span><span class="n">columns</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">df_term</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-98c25e8a-3cbc-4c7d-aaa4-c087c025e4d4" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sistem</th>
+      <th>informasi</th>
+      <th>akademik</th>
+      <th>siakad</th>
+      <th>berfungsi</th>
+      <th>menangani</th>
+      <th>pengelolaan</th>
+      <th>penyajian</th>
+      <th>datadata</th>
+      <th>fakulta</th>
+      <th>...</th>
+      <th>dimana</th>
+      <th>dikolaborasikan</th>
+      <th>menggerakkan</th>
+      <th>langkah</th>
+      <th>playernya</th>
+      <th>interaksi</th>
+      <th>obyek</th>
+      <th>gerak</th>
+      <th>bola</th>
+      <th>dipukul</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>7</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>6</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>7</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>6</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>7</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>15 rows × 241 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-98c25e8a-3cbc-4c7d-aaa4-c087c025e4d4')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-98c25e8a-3cbc-4c7d-aaa4-c087c025e4d4 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-98c25e8a-3cbc-4c7d-aaa4-c087c025e4d4');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-5622073c-a21a-4c01-8bc8-22b4a1e18a30">
+  <button class="colab-df-quickchart" onclick="quickchart('df-5622073c-a21a-4c01-8bc8-22b4a1e18a30')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-5622073c-a21a-4c01-8bc8-22b4a1e18a30 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># menghitung jumlah kemunculan kata untuk setiap kata dalam VSM dalam term frequency</span>
+<span class="n">word_counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">count_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># membuat pasangan kata dan jumlah kemunculannya dalam bentuk kamus (dictionary)</span>
+<span class="n">word_count_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">(),</span> <span class="n">word_counts</span><span class="p">))</span>
+
+<span class="c1"># Tampilkan kamus kata dan jumlah kemunculannya</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah Kemunculan Kata:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">word_count_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah Kemunculan Kata:
+administr: 18
+akademik: 9
+aks: 6
+algoritma: 9
+animasi: 6
+aplikasi: 18
+aplikasiaplikasi: 3
+ar: 9
+aslinya: 3
+augment: 21
+avail: 3
+bahasa: 3
+bandwidth: 3
+banyaknya: 3
+basisdata: 6
+bata: 3
+benda: 3
+bentuk: 3
+berbasi: 6
+berbentuk: 6
+berdasarkan: 3
+berfungsi: 6
+bergerak: 6
+berisi: 3
+berjalan: 3
+berjalannya: 6
+berkembang: 3
+berpotensi: 6
+bertanggung: 3
+bertujuan: 3
+biaya: 3
+bidang: 6
+bola: 3
+browser: 12
+cepat: 3
+client: 12
+contoh: 3
+dasar: 3
+data: 12
+databas: 12
+datadata: 3
+dekripsi: 3
+diaks: 3
+dianggap: 3
+dibentuk: 6
+dibuktikan: 3
+dibutuhkan: 3
+dicoba: 3
+didalam: 3
+didapatkan: 3
+didunia: 3
+diharapkan: 6
+dijadikan: 3
+diken: 3
+dikirim: 6
+dikolaborasikan: 3
+dimana: 3
+dimiliki: 3
+dipertimbangkan: 3
+dipukul: 3
+disebabkan: 3
+display: 3
+distribusi: 3
+ditampilkan: 6
+diterapkan: 3
+dituntut: 3
+dokumen: 33
+dunia: 6
+engin: 3
+enkripsi: 6
+explor: 3
+fakulta: 6
+firefox: 3
+fit: 3
+flartoolkit: 6
+flash: 3
+gangguan: 18
+genetika: 9
+gerak: 3
+halamanhalaman: 3
+harapan: 3
+hasil: 6
+hasilnya: 3
+headmount: 3
+hmd: 3
+html: 27
+http: 9
+informasi: 12
+interaksi: 3
+internet: 3
+jadwal: 15
+jaringan: 54
+javascript: 3
+kebijakan: 3
+kecepatan: 3
+kelambatan: 3
+kelebihan: 3
+kelemahan: 3
+kendalakendala: 3
+kenyataan: 3
+kerusakan: 3
+ketersediaan: 3
+keuntungan: 3
+klien: 3
+kode: 3
+kodekod: 3
+komplek: 6
+komput: 15
+koneksi: 24
+kontrol: 12
+kualita: 3
+kuliah: 9
+kunci: 6
+lancar: 6
+langkah: 3
+lapangan: 3
+layanan: 3
+level: 3
+librari: 6
+local: 3
+lunak: 3
+mahasiswa: 3
+markup: 3
+masingmas: 3
+mata: 3
+matakuliah: 6
+maya: 3
+memanajemen: 3
+memantau: 3
+membantu: 3
+membutuhkan: 6
+memiliki: 6
+mempermudah: 3
+menangani: 3
+menemukan: 3
+menerima: 12
+meneruskannya: 3
+mengahadapi: 3
+mengambil: 3
+mengatur: 3
+mengembangkan: 3
+menggabungkan: 3
+menggerakkan: 3
+mengirimkan: 3
+mengontrol: 3
+meningkatkan: 3
+menjaga: 3
+menu: 3
+menyelesaikan: 3
+metod: 6
+mobil: 9
+monitor: 12
+mozilla: 3
+mudah: 6
+muncul: 3
+murni: 3
+nilai: 6
+node: 6
+obyek: 6
+opera: 3
+optim: 12
+optimasi: 6
+otomati: 6
+otonomi: 3
+padatnya: 6
+pelayanan: 3
+pemakai: 3
+pembenahan: 3
+pembuatan: 3
+pemrosesan: 9
+pendukung: 6
+penelitan: 3
+penelitian: 6
+pengaduan: 3
+pengawasan: 3
+pengelolaan: 3
+pengembangan: 6
+penggunaan: 3
+penggunanya: 3
+penjadwalan: 15
+penyajian: 3
+penyusunan: 3
+peralatan: 3
+perangkat: 3
+perawatannya: 3
+perguruan: 3
+perkembangan: 3
+permainan: 3
+permasalahan: 9
+permintaan: 6
+pesat: 3
+pingpong: 3
+plaintext: 3
+platform: 3
+playernya: 3
+port: 3
+prose: 12
+proxi: 6
+queri: 6
+reabil: 3
+realiti: 21
+realtim: 3
+render: 3
+respon: 6
+salah: 3
+satunya: 3
+satusatunya: 3
+sebutan: 3
+seir: 6
+selayaknya: 3
+semoga: 3
+server: 18
+sesuai: 3
+siakad: 12
+sistem: 30
+skala: 3
+solusi: 3
+sourc: 3
+teknolog: 6
+teknologiteknolog: 3
+terbaik: 3
+terbaru: 3
+terdistribusi: 6
+terenkripsi: 9
+terkoneksi: 3
+terpusat: 6
+terputusnya: 3
+tersedia: 3
+tersimpan: 3
+tipi: 3
+traffic: 3
+transaksi: 3
+trunojoyo: 3
+tuga: 6
+tujuan: 3
+universita: 3
+upaya: 3
+variabel: 3
+view: 3
+virtual: 6
+web: 33
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nltk_frequency_vectorize</span><span class="p">(</span><span class="n">corpus</span><span class="p">):</span>
+
+    <span class="c1"># The NLTK frequency vectorize method</span>
+    <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+
+    <span class="k">def</span> <span class="nf">vectorize</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+            <span class="n">features</span><span class="p">[</span><span class="n">token</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">features</span>
+
+    <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">vectorize</span><span class="p">,</span> <span class="n">corpus</span><span class="p">)</span>
+<span class="n">vectnltk</span><span class="o">=</span><span class="n">nltk_frequency_vectorize</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;abstrak_cleaned&#39;</span><span class="p">])</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">vectnltk</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>map
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Frequency</span>
+<span class="k">def</span> <span class="nf">sklearn_frequency_vectorize</span><span class="p">(</span><span class="n">corpus</span><span class="p">):</span>
+    <span class="c1"># The Scikit-Learn frequency vectorize method</span>
+    <span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+
+    <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">corpus</span><span class="p">)</span>
+<span class="n">vectsklen</span><span class="o">=</span><span class="n">sklearn_frequency_vectorize</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;abstrak_cleaned&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vectsklen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  (0, 214)	7
+  (0, 87)	3
+  (0, 1)	3
+  (0, 213)	4
+  (0, 21)	1
+  (0, 133)	1
+  (0, 175)	1
+  (0, 180)	1
+  (0, 40)	1
+  (0, 71)	2
+  (0, 43)	1
+  (0, 165)	1
+  (0, 121)	1
+  (0, 130)	2
+  (0, 235)	1
+  (0, 232)	1
+  (0, 227)	1
+  (0, 39)	4
+  (0, 225)	2
+  (0, 96)	1
+  (0, 184)	1
+  (0, 153)	1
+  (0, 30)	1
+  (0, 27)	1
+  (0, 137)	1
+  :	:
+  (199, 190)	1
+  (199, 140)	1
+  (199, 118)	2
+  (199, 170)	2
+  (199, 74)	2
+  (199, 204)	1
+  (199, 205)	1
+  (199, 193)	1
+  (199, 75)	1
+  (199, 20)	1
+  (199, 4)	2
+  (199, 16)	1
+  (199, 22)	2
+  (199, 187)	1
+  (199, 191)	1
+  (199, 56)	1
+  (199, 55)	1
+  (199, 142)	1
+  (199, 114)	1
+  (199, 194)	1
+  (199, 88)	1
+  (199, 158)	2
+  (199, 78)	1
+  (199, 32)	1
+  (199, 59)	1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+
+<span class="c1">#coun_vect = CountVectorizer()</span>
+<span class="n">coun_vect</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">count_matrix</span> <span class="o">=</span> <span class="n">coun_vect</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;abstrak_cleaned&#39;</span><span class="p">])</span>
+<span class="n">count_array</span> <span class="o">=</span> <span class="n">count_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">count_array</span><span class="p">,</span><span class="n">columns</span> <span class="o">=</span> <span class="n">coun_vect</span><span class="o">.</span><span class="n">vocabulary_</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-75a30465-bc78-46a6-b918-0c4888add6ab" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sistem</th>
+      <th>informasi</th>
+      <th>akademik</th>
+      <th>siakad</th>
+      <th>berfungsi</th>
+      <th>menangani</th>
+      <th>pengelolaan</th>
+      <th>penyajian</th>
+      <th>datadata</th>
+      <th>fakulta</th>
+      <th>...</th>
+      <th>dimana</th>
+      <th>dikolaborasikan</th>
+      <th>menggerakkan</th>
+      <th>langkah</th>
+      <th>playernya</th>
+      <th>interaksi</th>
+      <th>obyek</th>
+      <th>gerak</th>
+      <th>bola</th>
+      <th>dipukul</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>7</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>6</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>7</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 241 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-75a30465-bc78-46a6-b918-0c4888add6ab')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-75a30465-bc78-46a6-b918-0c4888add6ab button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-75a30465-bc78-46a6-b918-0c4888add6ab');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-9cb1b12b-a040-47f5-8608-22d5fa78e8e3">
+  <button class="colab-df-quickchart" onclick="quickchart('df-9cb1b12b-a040-47f5-8608-22d5fa78e8e3')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-9cb1b12b-a040-47f5-8608-22d5fa78e8e3 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TF-IDF</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span><span class="p">,</span><span class="n">CountVectorizer</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">tfidfvectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">analyzer</span><span class="o">=</span><span class="s1">&#39;word&#39;</span><span class="p">,</span><span class="n">stop_words</span><span class="o">=</span> <span class="s1">&#39;english&#39;</span><span class="p">)</span>
+<span class="n">tfidf_wm</span> <span class="o">=</span> <span class="n">tfidfvectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;abstrak_cleaned&#39;</span><span class="p">])</span>
+
+<span class="n">tfidf_tokens</span> <span class="o">=</span> <span class="n">tfidfvectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="n">df_tfidfvect</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">tfidf_wm</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span><span class="n">columns</span> <span class="o">=</span> <span class="n">tfidf_tokens</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TF-IDF</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">df_tfidfvect</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TF-IDF
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-4d74b70d-af93-451c-8aef-602fb3e0f867" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>administr</th>
+      <th>akademik</th>
+      <th>aks</th>
+      <th>algoritma</th>
+      <th>animasi</th>
+      <th>aplikasi</th>
+      <th>aplikasiaplikasi</th>
+      <th>ar</th>
+      <th>aslinya</th>
+      <th>augment</th>
+      <th>...</th>
+      <th>transaksi</th>
+      <th>trunojoyo</th>
+      <th>tuga</th>
+      <th>tujuan</th>
+      <th>universita</th>
+      <th>upaya</th>
+      <th>variabel</th>
+      <th>view</th>
+      <th>virtual</th>
+      <th>web</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.000000</td>
+      <td>0.260462</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.086821</td>
+      <td>0.086821</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.086821</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.300444</td>
+      <td>0.000000</td>
+      <td>0.100148</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.036909</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.105137</td>
+      <td>0.045153</td>
+      <td>0.000000</td>
+      <td>0.045153</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.045153</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.045153</td>
+      <td>0.000000</td>
+      <td>0.496684</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.252088</td>
+      <td>0.000000</td>
+      <td>0.048914</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.061937</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.084029</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.145724</td>
+      <td>0.042414</td>
+      <td>0.000000</td>
+      <td>0.218586</td>
+      <td>0.000000</td>
+      <td>0.510033</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.072862</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.145724</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>0.000000</td>
+      <td>0.260462</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.086821</td>
+      <td>0.086821</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.086821</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>0.300444</td>
+      <td>0.000000</td>
+      <td>0.100148</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.036909</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.105137</td>
+      <td>0.045153</td>
+      <td>0.000000</td>
+      <td>0.045153</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.045153</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.045153</td>
+      <td>0.000000</td>
+      <td>0.496684</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.252088</td>
+      <td>0.000000</td>
+      <td>0.048914</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.061937</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.084029</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.145724</td>
+      <td>0.042414</td>
+      <td>0.000000</td>
+      <td>0.218586</td>
+      <td>0.000000</td>
+      <td>0.510033</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.072862</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.145724</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 241 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-4d74b70d-af93-451c-8aef-602fb3e0f867')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-4d74b70d-af93-451c-8aef-602fb3e0f867 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-4d74b70d-af93-451c-8aef-602fb3e0f867');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-ed460c5c-6d83-450c-b9bc-30c10ef302c2">
+  <button class="colab-df-quickchart" onclick="quickchart('df-ed460c5c-6d83-450c-b9bc-30c10ef302c2')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-ed460c5c-6d83-450c-b9bc-30c10ef302c2 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Logaritmic Frequency</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">count_matrix</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;abstrak_cleaned&#39;</span><span class="p">])</span>
+<span class="n">log_count_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">count_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="n">df_log_vsm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">log_count_matrix</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+<span class="n">df_log_vsm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-a7868e4e-c8c3-4ddd-af9a-566245c7f0ab" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>administr</th>
+      <th>akademik</th>
+      <th>aks</th>
+      <th>algoritma</th>
+      <th>animasi</th>
+      <th>aplikasi</th>
+      <th>aplikasiaplikasi</th>
+      <th>ar</th>
+      <th>aslinya</th>
+      <th>augment</th>
+      <th>...</th>
+      <th>transaksi</th>
+      <th>trunojoyo</th>
+      <th>tuga</th>
+      <th>tujuan</th>
+      <th>universita</th>
+      <th>upaya</th>
+      <th>variabel</th>
+      <th>view</th>
+      <th>virtual</th>
+      <th>web</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.00000</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.94591</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.609438</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>2.484907</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>2.079442</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>0.00000</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>1.94591</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.609438</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>2.484907</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>2.079442</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 241 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a7868e4e-c8c3-4ddd-af9a-566245c7f0ab')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-a7868e4e-c8c3-4ddd-af9a-566245c7f0ab button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-a7868e4e-c8c3-4ddd-af9a-566245c7f0ab');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-324a16fd-d7e6-4bf8-bb40-802f97c7fd16">
+  <button class="colab-df-quickchart" onclick="quickchart('df-324a16fd-d7e6-4bf8-bb40-802f97c7fd16')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-324a16fd-d7e6-4bf8-bb40-802f97c7fd16 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Binary Frequency</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">binary</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;abstrak_cleaned&#39;</span><span class="p">])</span>
+<span class="n">feature_names</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="n">df_vsm_binary</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="n">df_vsm_binary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-cf5aa4a0-8ebb-4cc9-8d22-c97ea29f7bf9" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>administr</th>
+      <th>akademik</th>
+      <th>aks</th>
+      <th>algoritma</th>
+      <th>animasi</th>
+      <th>aplikasi</th>
+      <th>aplikasiaplikasi</th>
+      <th>ar</th>
+      <th>aslinya</th>
+      <th>augment</th>
+      <th>...</th>
+      <th>transaksi</th>
+      <th>trunojoyo</th>
+      <th>tuga</th>
+      <th>tujuan</th>
+      <th>universita</th>
+      <th>upaya</th>
+      <th>variabel</th>
+      <th>view</th>
+      <th>virtual</th>
+      <th>web</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 241 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-cf5aa4a0-8ebb-4cc9-8d22-c97ea29f7bf9')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-cf5aa4a0-8ebb-4cc9-8d22-c97ea29f7bf9 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-cf5aa4a0-8ebb-4cc9-8d22-c97ea29f7bf9');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-dfc51790-eb3c-4722-bd85-106c5a05af6f">
+  <button class="colab-df-quickchart" onclick="quickchart('df-dfc51790-eb3c-4722-bd85-106c5a05af6f')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-dfc51790-eb3c-4722-bd85-106c5a05af6f button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>transformers
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: transformers in /usr/local/lib/python3.10/dist-packages (4.33.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from transformers) (3.12.2)
+Requirement already satisfied: huggingface-hub&lt;1.0,&gt;=0.15.1 in /usr/local/lib/python3.10/dist-packages (from transformers) (0.17.2)
+Requirement already satisfied: numpy&gt;=1.17 in /usr/local/lib/python3.10/dist-packages (from transformers) (1.23.5)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.10/dist-packages (from transformers) (23.1)
+Requirement already satisfied: pyyaml&gt;=5.1 in /usr/local/lib/python3.10/dist-packages (from transformers) (6.0.1)
+Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.10/dist-packages (from transformers) (2023.6.3)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from transformers) (2.31.0)
+Requirement already satisfied: tokenizers!=0.11.3,&lt;0.14,&gt;=0.11.1 in /usr/local/lib/python3.10/dist-packages (from transformers) (0.13.3)
+Requirement already satisfied: safetensors&gt;=0.3.1 in /usr/local/lib/python3.10/dist-packages (from transformers) (0.3.3)
+Requirement already satisfied: tqdm&gt;=4.27 in /usr/local/lib/python3.10/dist-packages (from transformers) (4.66.1)
+Requirement already satisfied: fsspec in /usr/local/lib/python3.10/dist-packages (from huggingface-hub&lt;1.0,&gt;=0.15.1-&gt;transformers) (2023.6.0)
+Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /usr/local/lib/python3.10/dist-packages (from huggingface-hub&lt;1.0,&gt;=0.15.1-&gt;transformers) (4.5.0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;transformers) (3.2.0)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;transformers) (3.4)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;transformers) (2.0.4)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;transformers) (2023.7.22)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="lda">
+<h1>LDA<a class="headerlink" href="#lda" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">LatentDirichletAllocation</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_multilabel_classification</span>
+<span class="c1"># This produces a feature matrix of token counts, similar to what</span>
+<span class="c1"># CountVectorizer would produce on text.</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">make_multilabel_classification</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">lda</span> <span class="o">=</span> <span class="n">LatentDirichletAllocation</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">lda</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">LatentDirichletAllocation</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="c1"># get topics for some given samples:</span>
+<span class="n">lda</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.00360392, 0.25499205, 0.0036211 , 0.64236448, 0.09541846],
+       [0.15297572, 0.00362644, 0.44412786, 0.39568399, 0.003586  ]])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Selamat Datang</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="notebooks2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Implementasi Latent Directlet Allocation (LDA)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Crowling Data pta.trunojoyo</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-text">Normalisasi Text</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Arsy Maulana Ali
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

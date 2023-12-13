@@ -1,0 +1,82 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+def scraping_berita(halaman):
+
+    kategori = ['entertainment', 'sport', 'bisnis']
+
+    a = 1
+    with open('berita_suara_entertaiment.csv', 'w', newline='', encoding='utf-8') as file:
+        fieldnames = ['Judul_Artikel', 'Content_Artikel', 'Category']
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+
+        # Looping untuk setiap kategori
+        for kategori_terpilih in kategori:
+            katakunci = kategori_terpilih
+
+            for page in range(1, halaman + 1):
+                url = f'https://www.suara.com/indeks/terkini/{kategori}/2023?page={page}'
+                html = req.get(url).text
+                soup = bs(html, 'lxml')
+                list_berita = soup.find('div', class_='content mb-30 static')
+                berita_list = list_berita.find_all('div', class_='item')
+
+                for berita in berita_list:
+                    link = berita.find('div', class_='text-list-item-y').find('a')['href']
+                    headline = berita.find('div', class_='text-list-item-y').find('a').text
+                    category = "Edukasi"
+
+                    if (katakunci == 'entertainment'):
+                      category = 'Entertaiment'
+                    elif (katakunci == 'sport'):
+                      category = 'Sports'
+                    elif (katakunci == 'bisnis'):
+                      category = 'Bisnis'
+
+                    ge_berita = req.get(link).text
+                    sop_berita = bs(ge_berita, 'lxml')
+                    content_elem = sop_berita.find_all('article', class_='detail-content detail-berita')
+                    content_list = [p.text for elem in content_elem for p in elem.find_all('p')]
+                    artikel = '\n'.join(content_list).replace('ADVERTISEMENT', '').replace('SCROLL TO RESUME CONTENT', '').replace('\n', ' ').strip()
+
+                    print(f'data berhasil diambil[{a}] > {headline[0:10]}')
+                    a += 1
+
+                    writer.writerow({'Judul_Artikel': headline, 'Content_Artikel': artikel, 'Category': category})
+
+# pemanggilan fungsi dengan jumlah halaman yang di scraping
+scraping_berita(18)
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+[0;32m<ipython-input-2-8ddf24fc1bf9>[0m in [0;36m<cell line: 46>[0;34m()[0m
+[1;32m     44[0m [0;34m[0m[0m
+[1;32m     45[0m [0;31m# pemanggilan fungsi dengan jumlah halaman yang di scraping[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 46[0;31m [0mscraping_berita[0m[0;34m([0m[0;36m18[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m<ipython-input-2-8ddf24fc1bf9>[0m in [0;36mscraping_berita[0;34m(halaman)[0m
+[1;32m     18[0m                 [0msoup[0m [0;34m=[0m [0mbs[0m[0;34m([0m[0mhtml[0m[0;34m,[0m [0;34m'lxml'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     19[0m                 [0mlist_berita[0m [0;34m=[0m [0msoup[0m[0;34m.[0m[0mfind[0m[0;34m([0m[0;34m'div'[0m[0;34m,[0m [0mclass_[0m[0;34m=[0m[0;34m'content mb-30 static'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 20[0;31m                 [0mberita_list[0m [0;34m=[0m [0mlist_berita[0m[0;34m.[0m[0mfind_all[0m[0;34m([0m[0;34m'div'[0m[0;34m,[0m [0mclass_[0m[0;34m=[0m[0;34m'item'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     21[0m [0;34m[0m[0m
+[1;32m     22[0m                 [0;32mfor[0m [0mberita[0m [0;32min[0m [0mberita_list[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mAttributeError[0m: 'NoneType' object has no attribute 'find_all'
+
